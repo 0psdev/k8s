@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+#Install required packages
+sudo apt-get install -y apt-transport-https ca-certificates curl gpg
+
 #Disable swap
 swapoff -a
 sed -i -E '/\sswap\s/s/^/#/' /etc/fstab || true
