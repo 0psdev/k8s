@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt-cache madison kubeadm
 
 # Instll K8S
-sudo apt-get install -y kubelet=<VERSION> kubeadm=<VERSION> kubectl=<VERSION>
+sudo apt-get install -y kubelet=VERSION kubeadm=VERSION kubectl=VERSION
 
 sudo apt-mark hold kubelet kubeadm kubectl
 
