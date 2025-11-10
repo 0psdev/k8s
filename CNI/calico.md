@@ -1,9 +1,10 @@
 # Update helm repo
 helm repo add projectcalico https://docs.tigera.io/calico/charts
+
 helm repo update
 
 # List version on 
-helm repohelm search repo projectcalico/tigera-operator --versions
+helm search repo projectcalico/tigera-operator --versions
 
 # Create namespace
 kubectl create namespace tigera-operator
