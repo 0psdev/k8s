@@ -1,5 +1,5 @@
 # Defind MINOR_VERSION need to install
-KUBE_TAG="v1.33"
+KUBE_TAG="v1.33" #version relate with CRI-O
 
 curl -fsSL https://pkgs.k8s.io/core:/stable:/$KUBE_TAG/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 
