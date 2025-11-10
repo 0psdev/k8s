@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Set timezone
+sudo timedatectl set-timezone Asia/Bangkok
+
 #Install required packages
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 
