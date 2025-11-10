@@ -26,7 +26,7 @@ echo "deb [signed-by=$KEYRING_DIR/cri-o-apt-keyring.gpg] https://download.opensu
   | sudo tee /etc/apt/sources.list.d/cri-o.list > /dev/null
 
 sudo apt-get update
-sudo apt-get install -y cri-o runc
+sudo apt-get install -y cri-o cri-tools runc
 
 # ensure CRI-O log directories exist and are writable by the daemon
 #sudo mkdir -p /var/log/crio/pods
