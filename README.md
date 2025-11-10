@@ -19,23 +19,4 @@ Basic Kubernetes (K8S) installation in a small environment that’s practical en
 4. Install CNI plugin (calico) -> [CNI](https://github.com/0psdev/k8s/blob/main/CNI/calico.md)
 5. Install Metrics Server (kubeclt top)
 
-# Firewall rule Controlplan
-
-ufw allow 6443/tcp <- Kubernetes API server
-
-ufw allow 10250/tcp <- Kubelet
-
-ufw allow 4789/udp <- Calico VXLAN overlay
-
-ufw allow 5473/tcp <- Calico Typha
-
-ufw allow in on eth0 to any port 4789 proto udp
-
-# Firewall rule wokernode
-
-ufw allow 10250/tcp <-Allow Kubelet
-
-ufw allow 4789/udp <- Allow Calico VXLAN overlay traffic
-
-ufw allow in on eth0 to any port 4789 proto udp
 
