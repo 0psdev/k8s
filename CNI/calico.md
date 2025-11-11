@@ -10,7 +10,7 @@ helm search repo projectcalico/tigera-operator --versions
 kubectl create namespace tigera-operator
 
 # Install calico via helm
-helm install calico projectcalico/tigera-operator --version 3.31.0 -f values.yaml --namespace tigera-operator
+helm install calico projectcalico/tigera-operator --version v3.30.4 -f values.yaml --namespace tigera-operator
 
 # Additional for manage Calico via calicoctl
 curl -O -L https://github.com/projectcalico/calico/releases/download/v3.30.4/calicoctl-linux-amd64
