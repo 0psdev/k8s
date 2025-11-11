@@ -14,7 +14,9 @@ helm install calico projectcalico/tigera-operator --version 3.31.0 -f values.yam
 
 # Additional for manage Calico via calicoctl
 curl -O -L https://github.com/projectcalico/calico/releases/download/v3.30.4/calicoctl-linux-amd64
+
 chmod +x calicoctl-linux-amd64
+
 sudo mv calicoctl-linux-amd64 /usr/local/bin/calicoctl
 
 export DATASTORE_TYPE=kubernetes
