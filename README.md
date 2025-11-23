@@ -16,9 +16,8 @@ Basic Kubernetes (K8S) installation in a small environment that’s practical en
 1. Prepare your host before installing software -> [HOST](https://github.com/0psdev/k8s/blob/main/Host/prepare.sh)
 2. Install container runtime (using CRI-O) -> [CRIO](https://github.com/0psdev/k8s/blob/main/CRI-O/crio.sh)
 3. Install K8S (using kubeadm) -> [K8S](https://github.com/0psdev/k8s/blob/main/K8S/k8s.md)
-4. Install CNI plugin 
--> [calico](https://github.com/0psdev/k8s/tree/main/CNI/calico)
--> [cilium](https://github.com/0psdev/k8s/tree/main/CNI/cilium)
+4. Install CNI plugin -> [calico](https://github.com/0psdev/k8s/tree/main/CNI/calico)
+                      -> [cilium](https://github.com/0psdev/k8s/tree/main/CNI/cilium)
 5. Install Metrics Server (kubeclt top)
 
 # ⭐ Remark

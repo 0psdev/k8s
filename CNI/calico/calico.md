@@ -20,4 +20,3 @@ chmod +x calicoctl-linux-amd64
 sudo mv calicoctl-linux-amd64 /usr/local/bin/calicoctl
 
 export DATASTORE_TYPE=kubernetes
-
