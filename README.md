@@ -5,7 +5,7 @@ Basic Kubernetes (K8S) installation in a small environment that’s practical en
 - OS: Ubuntu
 - Container Runtime: CRI‑O
 - Cluster Tooling: kubeadm
-- CNI Plugin: Calico
+- CNI Plugin: Calico or Cilium
 
 # 🎯 Propose
 1. For basic learning and hands‑on practice.
