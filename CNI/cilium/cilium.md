@@ -1,5 +1,6 @@
 # Install Cilium via helm
 helm repo add cilium https://helm.cilium.io/
+
 helm repo update
 
 helm install cilium cilium/cilium --version 1.18.4 \ <- version 1.14.8 include eBPF feature
