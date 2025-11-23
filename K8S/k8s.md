@@ -21,7 +21,7 @@ sudo systemctl enable --now kubelet
 sudo kubeadm init --kubernetes-version=1.33.5 \
                   --cri-socket=unix:///var/run/crio/crio.sock \
                   --pod-network-cidr=x.x.x.x \
-                  --service-cidr=y.y.y.y \ 
+                  --service-cidr=y.y.y.y \
                   --control-plane-endpoint=name \
                   --cluster-name=mycluster
 
