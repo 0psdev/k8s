@@ -18,9 +18,10 @@ sudo apt-mark hold kubelet kubeadm kubectl
 sudo systemctl enable --now kubelet
 
 # Initial Cluster (only controlplan)
-sudo kubeadm init --kubernetes-version=1.33.5 --cri-socket=unix:///var/run/crio/crio.sock --pod-network-cidr=x.x.x.x --service-cidr=y.y.y.y --control-plane-endpoint=name 
+sudo kubeadm init --kubernetes-version=1.33.5 --cri-socket=unix:///var/run/crio/crio.sock --pod-network-cidr=x.x.x.x --service-cidr=y.y.y.y --control-plane-endpoint=name --cluster-name=mycluster
 
-*** x.x.x.x=network-ip-pod y.y.y.y=network-ip-service name=endpoint-access ***
+
+*** x.x.x.x=network-ip-pod y.y.y.y=network-ip-service name=endpoint-access mycluster=name for cluster (when you have many cluster)***
 
 # Joint worker
 sudo kubeadm join ct01.home.local:6443 --token TTTTT --discovery-token-ca-cert-hash sha256:HHHHH 
