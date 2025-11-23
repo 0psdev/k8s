@@ -1,5 +1,5 @@
 # Defind MINOR_VERSION need to install
-KUBE_TAG="v1.33"  #version relate with CRI-O
+KUBE_TAG="v1.33"      #version relate with CRI-O
 
 curl -fsSL https://pkgs.k8s.io/core:/stable:/$KUBE_TAG/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 
@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt-cache madison kubeadm
 
 # Install K8S
-sudo apt-get install -y kubelet=MINOR_VERSION kubeadm=MINOR_VERSION kubectl=MINOR_VERSION  *** kubeadm=1.33.5-1.1***
+sudo apt-get install -y kubelet=MINOR_VERSION kubeadm=MINOR_VERSION kubectl=MINOR_VERSION      *** kubeadm=1.33.5-1.1***
 
 sudo apt-mark hold kubelet kubeadm kubectl
 
