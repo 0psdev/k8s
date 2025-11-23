@@ -26,9 +26,12 @@ kubeadm join ct01.home.local:6443 --token TTTTT --discovery-token-ca-cert-hash s
 # Make config
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 # Install helm
 $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+
 $ chmod 700 get_helm.sh
+
 $ ./get_helm.sh
