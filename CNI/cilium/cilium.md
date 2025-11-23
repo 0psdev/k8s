@@ -23,6 +23,35 @@ helm install cilium cilium/cilium  \\
 
   --set k8sServiceCIDR=172.31.1.0/24
 
+# Install Cilium (eBPF+vxlan) via helm
+helm install cilium cilium/cilium --version 1.18.4 \\
+
+  --namespace kube-system \\
+
+  --set ipam.mode=cluster-pool \\
+
+  --set ipam.operator.clusterPoolIPv4PodCIDRList="{10.10.3.0/24}" \\
+
+  --set ipam.operator.clusterPoolIPv4MaskSize=26 \\
+
+  --set kubeProxyReplacement=true \\
+
+  --set routingMode=tunnel \\
+
+  --set tunnelProtocol=vxlan \\
+
+  --set nodePort.enabled=true \\
+
+  --set enableIPv4Masquerade=true \\
+
+  --set bpf.masquerade=true \\
+
+  --set hostReachableServices.enabled=true \\
+
+  --set cluster.id=1 \\
+  
+  --set cluster.name=cluster-a
+
 # Install cilium CLI
 CILIUM_CLI_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/cilium-cli/master/stable.txt)
 CLI_ARCH=amd64
@@ -58,3 +87,33 @@ rm hubble-linux-${HUBBLE_ARCH}.tar.gz{,.sha256sum}
 cilium hubble port-forward&
 
 hubble observe
+
+# Enable eBPF
+
+helm upgrade cilium cilium/cilium --version 1.18.4 \\
+
+  --namespace kube-system \\
+
+  --set ipam.mode=cluster-pool \\
+
+  --set ipam.operator.clusterPoolIPv4PodCIDRList="{10.10.1.0/24}" \\
+
+  --set ipam.operator.clusterPoolIPv4MaskSize=26 \\
+
+  --set kubeProxyReplacement=true \\
+
+  --set routingMode=tunnel \\
+
+  --set tunnelProtocol=vxlan \\
+
+  --set nodePort.enabled=true \\
+
+  --set enableIPv4Masquerade=true \\
+
+  --set bpf.masquerade=true \\
+
+  --set hostReachableServices.enabled=true \\
+
+  --set cluster.id=1 \\
+
+  --set cluster.name=cluster-a
