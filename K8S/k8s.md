@@ -29,6 +29,7 @@ sudo kubeadm join ct01.home.local:6443 --token TTTTT --discovery-token-ca-cert-h
 
 # Make config
 mkdir -p $HOME/.kube
+
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
