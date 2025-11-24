@@ -53,7 +53,6 @@ helm install cilium cilium/cilium --version 1.18.4 \\
   --set cluster.name=cluster-a
 
 # Install cilium CLI
-# Determine the latest stable version and target architecture
 CILIUM_CLI_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/cilium-cli/main/stable.txt)
 CLI_ARCH=amd64
 if [ "$(uname -m)" = "aarch64" ]; then
