@@ -117,3 +117,6 @@ helm upgrade cilium cilium/cilium --version 1.18.4 \\
   --set cluster.id=1 \\
 
   --set cluster.name=cluster-a
+
+  # Option enable mesh
+  kubectl create clusterrolebinding admin-secrets --clusterrole=cluster-admin --user=kubernetes-admin
