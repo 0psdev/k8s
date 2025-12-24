@@ -32,4 +32,3 @@ sudo systemctl enable --now crio.service
 sudo apt-mark hold cri-o #Hold cri-o version
 
 echo "CRI-O installed and started."
-// ...existing code...
