@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # ...existing code...
 
-set -euo pipefail
-
 #Define versions
 KUBERNETES_VERSION=v1.33 #<-- version base on customer need
 CRIO_VERSION=v1.33 #<-- version relate to kubernetes version
