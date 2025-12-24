@@ -25,4 +25,3 @@ EOF
 sysctl --system
 
 echo "Prepared host successfully."
-//
